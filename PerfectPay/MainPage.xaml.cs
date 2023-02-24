@@ -19,11 +19,11 @@ public partial class MainPage : ContentPage
     private void CalculateTotal()
     {
         // Total Tip
-        var totalTip = (bill + tip) / 100;
+        var totalTip = (bill * tip) / 100;
 
         // Tip by Person
         var tipByPerson = (totalTip / noPersons);
-        lblNoPersons.Text = $"{tipByPerson:C}";
+        lblTipByPerson.Text = $"{tipByPerson:C}";
 
         // Sub Total
         var subTotal = (bill / noPersons);
